@@ -429,22 +429,6 @@
           <h3 class="text-2xl font-bold text-slate-800 mb-6">Остались вопросы?</h3>
           <p class="text-slate-600 mb-6">Заполните форму, и наш специалист свяжется с вами в течение 24 часов</p>
           <!-- Уведомления -->
-<?php 
-session_start();
-if (isset($_SESSION['form_success'])): 
-    unset($_SESSION['form_success']); // Удаляем флаг после показа
-?>
-    <div class="mb-6 p-4 bg-green-100 text-green-700 rounded-lg animate-fade-in">
-        ✓ Спасибо! Ваше сообщение отправлено.
-    </div>
-<?php endif; ?>
-
-<?php if (isset($_SESSION['form_error'])): ?>
-    <div class="mb-6 p-4 bg-red-100 text-red-700 rounded-lg animate-fade-in">
-        <?= $_SESSION['form_error'] ?>
-    </div>
-    <?php unset($_SESSION['form_error']); ?>
-<?php endif; ?>
           <form action="submit_feedback.php" method="POST" class="space-y-5">
             <!-- Поле имени -->
             <div>
