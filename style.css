@@ -95,3 +95,34 @@ video{
   margin: 0 0.25rem;
   line-height: 1;
 }
+
+
+.character-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.character-card > div:first-child {
+  height: 256px; /* Фиксированная высота изображения */
+}
+.swiper-slide {
+  height: auto;
+  width: 300px; /* Фиксированная ширина карточки */
+}
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  width: 48px;
+  height: 48px;
+  background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233b82f6' viewBox='0 0 24 24'%3E%3Cpath d='M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z'/%3E%3C/svg%3E") no-repeat center;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.swiper-button-next-custom {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233b82f6' viewBox='0 0 24 24'%3E%3Cpath d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z'/%3E%3C/svg%3E");
+}
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 280px;
+  }
+}

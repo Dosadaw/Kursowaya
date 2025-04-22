@@ -7,11 +7,12 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Подключение шрифтов -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-  
 </head>
 <body class="bg-blue-700">
 <!-- Шапка -->
@@ -132,61 +133,179 @@
           <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
           <p class="max-w-3xl mx-auto text-lg text-slate-600">Познакомьтесь с членами группы SEES и другими персонажами, которые сыграют важную роль в вашем путешествии.</p>
         </div>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Главный герой -->
-          <div class="character-card bg-white rounded-xl overflow-hidden">
-            <img src="img/image_2025-04-21_23-48-01.png" alt="Главный герой" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-2">Главный герой</h3>
-              <p class="text-slate-600 text-sm mb-4">Протагонист, обладающий уникальной способностью вызывать несколько Персон</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Орфей</span>
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Дикий</span>
+    
+        <!-- Обертка слайдера с внешними стрелками -->
+        <div class="relative">
+          <!-- Кастомные стрелки -->
+          <div class="swiper-button-prev-custom absolute left-0 top-1/2 z-10 -translate-y-1/2 -translate-x-4 hidden md:flex"></div>
+          <div class="swiper-button-next-custom absolute right-0 top-1/2 z-10 -translate-y-1/2 translate-x-4 hidden md:flex"></div>
+    
+          <!-- Основной слайдер с отступами -->
+          <div class="characters-slider swiper-container overflow-hidden px-12">
+            <div class="swiper-wrapper pb-12">
+              <!-- Главный герой -->
+              <div class="swiper-slide">
+                <div class="character-card bg-white rounded-xl overflow-hidden mx-1 h-full">
+                  <div class="h-64 w-full overflow-hidden">
+                    <img src="img/image_2025-04-21_23-48-01.png" alt="Главный герой" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Главный герой</h3>
+                    <p class="text-slate-600 text-sm mb-4">Протагонист, обладающий уникальной способностью вызывать несколько Персон</p>
+                    <div class="flex flex-wrap gap-2">
+                      <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Орфей</span>
+                      <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Дикий</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Остальные карточки персонажей -->
+               <!-- Юкари Такеба -->
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="img/ukari.jpg" alt="Юкари Такеба" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Юкари Такеба</h3>
+                <p class="text-slate-600 text-sm mb-4">Старшеклассница, специализирующаяся на исцеляющих способностях</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Ио</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Лук</span>
+                </div>
               </div>
             </div>
           </div>
-          
-          <!-- Юкари Такеба -->
-          <div class="character-card bg-white rounded-xl overflow-hidden">
-            <img src="img/ukari.jpg" alt="Юкари Такеба" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-2">Юкари Такеба</h3>
-              <p class="text-slate-600 text-sm mb-4">Старшеклассница, специализирующаяся на исцеляющих способностях</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Ио</span>
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Лук</span>
-              </div>
-            </div>
-          </div>
-          
+
           <!-- Дзюнпэй Иори -->
-          <div class="character-card bg-white rounded-xl overflow-hidden">
-            <img src="img/image_2025-04-21_23-59-46.png" alt="Дзюнпэй Иори" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-2">Дзюнпэй Иори</h3>
-              <p class="text-slate-600 text-sm mb-4">Веселый и беззаботный парень, мастер ближнего боя</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Гермес</span>
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Меч</span>
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="img/image_2025-04-21_23-59-46.png" alt="Дзюнпэй Иори" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Дзюнпэй Иори</h3>
+                <p class="text-slate-600 text-sm mb-4">Веселый и беззаботный парень, мастер ближнего боя, лучший друг главного героя</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Гермес</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Меч</span>
+                </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Акихико Санда -->
-          <div class="character-card bg-white rounded-xl overflow-hidden">
-            <img src="img/sanada.jpg" alt="Акихико Санда" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-2">Акихико Санда</h3>
-              <p class="text-slate-600 text-sm mb-4">Серьёзный студент, президент студенческого совета, эксперт в электрических атаках</p>
-              <div class="flex flex-wrap gap-2">
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Полидевк</span>
-                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Кулаки</span>
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="img/sanada.jpg" alt="Дзюнпэй Иори" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Акихико Санда</h3>
+                <p class="text-slate-600 text-sm mb-4">Серьёзный студент, президент студенческого совета, эксперт в электрических атаках</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Полидевк</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Кулаки</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Мицуру Киридзё -->
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="img/mitshuru.jpg" alt="Мицуру Киридзё" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Мицуру Киридзё</h3>
+                <p class="text-slate-600 text-sm mb-4">Президент школьного совета, наследница корпорации Киридзё. </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Артемида</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Рапира</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Фука -->
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="/img/P3R-Fuuka-Action.webp" alt="Фука Ямагиси" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Фуука Ямагиси</h3>
+                <p class="text-slate-600 text-sm mb-4">Тихая девушка, обеспечивающая навигацию и поддержку для команды</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Люсия</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Поддержка</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Коромару -->
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="img/Koro.jpg" alt="Коромару" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Коромару</h3>
+                <p class="text-slate-600 text-sm mb-4">Верный пёс и умный, способный вызывать Персону (пушистый и милый)</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Цербер</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Когти</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Кен Амори -->
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="img/Ken.jpg" alt="Кен Амори" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Кен Амори</h3>
+                <p class="text-slate-600 text-sm mb-4">Мальчик, стремящийся отомстить за смерть матери. Решительный и неопытный</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Кресиус</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Копьё</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Шинджиро Арагаки -->
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="/img/Arakagi.jpg" alt="Шинджиро Арагаки" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-1">Шинджиро Арагаки</h3>
+                <p class="text-slate-600 text-sm mb-4">Друг Санады и Мицуру, ветеран SEES</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Кастор</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Молот</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+                    <!-- Айгис -->
+          <div class="swiper-slide">
+            <div class="character-card bg-white rounded-xl overflow-hidden mx-2 h-full">
+              <img src="img/aigis2.jpg" alt="Шинджиро Арагаки" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">Айгис</h3>
+                <p class="text-slate-600 text-sm mb-4">Девушка андроид, знающая о прошлом протогониста. Создана для уничтожения теней</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Афина</span>
+                  <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Огнестрел</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+                  
+        
+             
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
+
       <section id="media" class="py-20 bg-blue-50">
       <div  class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <h3  class="text-3xl font-bold text-slate-800 mb-12 text-center">Галерея</h3>
@@ -332,44 +451,53 @@
       </div>
     </section>
 <section id="buy" class="py-20 bg-blue-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl font-bold text-slate-800 mb-4">Приобрести игру</h2>
-        <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-        <p class="max-w-3xl mx-auto text-lg text-slate-600">Выберите подходящее издание и начните своё путешествие в мир Persona 3 Reload</p>
-      </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-slate-800 mb-4">Приобрести игру</h2>
+      <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+      <p class="max-w-3xl mx-auto text-lg text-slate-600">Выберите подходящее издание и начните своё путешествие в мир Persona 3 Reload</p>
+    </div>
   
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-        <!-- Блок изданий -->
-        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div class="p-8">
-            <h3 class="text-2xl font-bold text-slate-800 mb-6">Доступные издания</h3>
-            
-            <div class="space-y-6">
-              <!-- Стандартное издание -->
-              <div id="standard-edition" class="p-6 border border-gray-200 rounded-xl transition-all duration-300">
-                <div class="flex justify-between items-start">
-                  <h4 class="text-xl font-semibold text-slate-800">Стандартное издание</h4>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Блок изданий -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-slate-800 mb-6">Доступные издания</h3>
+          
+          <div class="space-y-6">
+            <!-- Стандартное издание -->
+            <div id="standard-edition" class="p-6 border border-gray-200 rounded-xl transition-all duration-300">
+              <div class="flex justify-between items-start">
+                <h4 class="text-xl font-semibold text-slate-800">Стандартное издание</h4>
+                <div class="text-right">
+                  <span class="text-lg text-gray-400 line-through mr-2">3 199 ₽</span>
                   <span class="text-2xl font-bold text-blue-600">2 499 ₽</span>
+                  <div class="text-xs text-green-600 font-medium mt-1">Скидка 22%</div>
                 </div>
-                <p class="text-slate-600 mt-2">Полная версия игры Persona 3 Reload с основным сюжетом</p>
-                <button onclick="selectEdition('standard')" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                  Выбрать
-                </button>
               </div>
-  
-              <!-- Deluxe издание -->
-              <div id="deluxe-edition" class="p-6 border border-gray-200 rounded-xl transition-all duration-300">
-                <div class="flex justify-between items-start">
-                  <h4 class="text-xl font-semibold text-slate-800">Deluxe издание</h4>
-                  <span class="text-2xl font-bold text-blue-600">3 499 ₽</span>
-                </div>
-                <p class="text-slate-600 mt-2">Игра + эксклюзивные костюмы, дополнительные Персоны и цифровой артбук</p>
-                <button onclick="selectEdition('deluxe')" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                  Выбрать
-                </button>
-              </div>
+              <p class="text-slate-600 mt-2">Полная версия игры Persona 3 Reload с основным сюжетом</p>
+              <button onclick="selectEdition('standard')" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Выбрать
+              </button>
             </div>
+  
+            <!-- Deluxe издание -->
+            <div id="deluxe-edition" class="p-6 border border-gray-200 rounded-xl transition-all duration-300">
+              <div class="flex justify-between items-start">
+                <h4 class="text-xl font-semibold text-slate-800">Deluxe издание</h4>
+                <div class="text-right">
+                  <span class="text-lg text-gray-400 line-through mr-2">4 299 ₽</span>
+                  <span class="text-2xl font-bold text-blue-600">3 499 ₽</span>
+                  <div class="text-xs text-green-600 font-medium mt-1">Скидка 19%</div>
+                </div>
+              </div>
+              <p class="text-slate-600 mt-2">Игра + эксклюзивные костюмы, дополнительные Персоны и цифровой артбук</p>
+              <button onclick="selectEdition('deluxe')" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Выбрать
+              </button>
+            </div>
+          </div>
+  
   
 
           <!-- Сравнение изданий -->
