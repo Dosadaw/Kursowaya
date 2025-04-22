@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persona 3 Reload | Официальный сайт</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Подключение шрифтов -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+<body class="bg-blue-700">
+<!-- Шапка -->
+<div class="header fixed top-0 left-0 w-full z-50 bg-black bg-opacity-30 backdrop-blur-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center">
+    <!-- Логотип - прижато к левому краю -->
+    <div class="logo text-2xl font-bold text-white flex-none">PERSONA 3 RELOAD</div>
+    
+    <!-- Гибкое пространство между лого и навигацией -->
+    <div class="flex-auto"></div>
+    
+    <!-- Навигация и кнопка - прижаты к правому краю -->
+    <div class="flex items-center space-x-6">
+      <nav class="hidden md:flex">
+        <div class="flex space-x-4 lg:space-x-8">
+          <a href="#story" class="text-white hover:text-blue-300 font-medium transition-colors">Сюжет</a>
+          <a href="#characters" class="text-white hover:text-blue-300 font-medium transition-colors">Персонажи</a>
+          <a href="#gameplay" class="text-white hover:text-blue-300 font-medium transition-colors">Геймплей</a>
+          <a href="#media" class="text-white hover:text-blue-300 font-medium transition-colors">Медиа</a>
+        </div>
+      </nav>
+      
+      <div class="hidden md:block flex-none">
+        <a href="#buy" class="btn-gradient px-6 py-2 rounded-full font-medium text-white hover:opacity-90 transition-opacity">Купить сейчас</a>
+      </div>
+    </div>
+    
+    <!-- Кнопка меню для мобильной версии -->
+    <button class="md:hidden text-white ml-4 flex-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+</div>
+  
+  <!-- Основное содержимое -->
+  <main class="main bg-white">
+    <!-- Видео-блок -->
+    <div class="video-container relative">
+      <video src="video/bulk.mp4" type="video/mp4" id="video1" autoplay muted>
+        <video src="video/bulk.mp4" type="video/webm" id="video1" autoplay muted></video>
+        <video src="video/bulk.mp4"type="video/ogg" id="video1" autoplay muted></video>
+        Your browser does not support HTML5 video.
+      </video>
+    
+      <video src="video/fv_movie2_1aaf21a0de60678450744da0dbaf9ef4.mp4" type="video/mp4" id="video2" muted loop>
+        <video src="video/fv_movie2_1aaf21a0de60678450744da0dbaf9ef4.mp4" type="video/webm"" id="video2" muted loop>
+          <video src="video/fv_movie2_1aaf21a0de60678450744da0dbaf9ef4.mp4" type="video/ogg" id="video2" muted loop></video>
+        </video>
+        Your browser does not support HTML5 video.
+      </video>
+      
+      <!-- Таймер обратного отсчета -->
+      <div class="absolute bottom-8 left-8 timer-container timer-font">
+        <div class="text-white mb-2 text-lg">Скидка закончится через:</div>
+        <div class="flex items-center justify-center">
+          <div class="timer-segment">
+            <div class="timer-value" id="days">00</div>
+            <div class="timer-label">Дней</div>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-segment">
+            <div class="timer-value" id="hours">00</div>
+            <div class="timer-label">Часов</div>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-segment">
+            <div class="timer-value" id="minutes">00</div>
+            <div class="timer-label">Минут</div>
+          </div>
+          <div class="timer-separator">:</div>
+          <div class="timer-segment">
+            <div class="timer-value" id="seconds">00</div>
+            <div class="timer-label">Секунд</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="absolute inset-0 bg-opacity-50 flex items-center">
+        <div class="ml-auto mr-12 text-left px-4 max-w-xl">
+          <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">PERSONA 3 RELOAD</h1>
+          <p class="text-xl md:text-2xl text-blue-200 mb-8">Переосмысление культовой JRPG с современной графикой и геймплеем</p>
+          <a href="#buy" class="btn-gradient px-8 py-3 rounded-full text-lg font-bold inline-block">Предзаказ</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Секция сюжета -->
+    <section id="story" class="py-20  bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-800 mb-4">Сюжет</h2>
+          <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p class="max-w-3xl mx-auto text-lg text-slate-600">История о группе студентов, исследующих таинственный Тартарус и сражающихся с Тенями во время Тёмного часа.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-6">Тёмный час</h3>
+            <p class="text-slate-600 mb-6">Каждый день в полночь наступает скрытый час между одним днём и другим - Тёмный час. Большинство людей превращаются в гробы и не помнят этого времени, но некоторые сохраняют сознание.</p>
+            <p class="text-slate-600 mb-6">Именно тогда появляется Тартарус - гигантская башня, заполненная Тенями, существами, питающимися человеческим разумом. Группа SEES (Особая Отрядная Студенческая Служба) исследует башню и сражается с Тенями.</p>
+            <p class="text-slate-600">Главный герой, обладающий редкой способностью вызывать несколько Персон, присоединяется к группе и начинает раскрывать тайны Тёмного часа.</p>
+          </div>
+          <div class="relative">
+            <img src="img/tartar.jpeg" alt="Тартарус" class="rounded-xl shadow-xl">
+            <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              <span class="font-bold">Тартарус</span> - башня Теней
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция персонажей -->
+    <section id="characters" class="pt-20 bg-blue-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-800 mb-4">Персонажи</h2>
+          <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p class="max-w-3xl mx-auto text-lg text-slate-600">Познакомьтесь с членами группы SEES и другими персонажами, которые сыграют важную роль в вашем путешествии.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Главный герой -->
+          <div class="character-card bg-white rounded-xl overflow-hidden">
+            <img src="img/image_2025-04-21_23-48-01.png" alt="Главный герой" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-800 mb-2">Главный герой</h3>
+              <p class="text-slate-600 text-sm mb-4">Протагонист, обладающий уникальной способностью вызывать несколько Персон</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Орфей</span>
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Дикий</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Юкари Такеба -->
+          <div class="character-card bg-white rounded-xl overflow-hidden">
+            <img src="img/ukari.jpg" alt="Юкари Такеба" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-800 mb-2">Юкари Такеба</h3>
+              <p class="text-slate-600 text-sm mb-4">Старшеклассница, специализирующаяся на исцеляющих способностях</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Ио</span>
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Лук</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Дзюнпэй Иори -->
+          <div class="character-card bg-white rounded-xl overflow-hidden">
+            <img src="img/image_2025-04-21_23-59-46.png" alt="Дзюнпэй Иори" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-800 mb-2">Дзюнпэй Иори</h3>
+              <p class="text-slate-600 text-sm mb-4">Веселый и беззаботный парень, мастер ближнего боя</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Гермес</span>
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Меч</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Акихико Санда -->
+          <div class="character-card bg-white rounded-xl overflow-hidden">
+            <img src="img/sanada.jpg" alt="Акихико Санда" class="w-full h-64 object-cover">
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-slate-800 mb-2">Акихико Санда</h3>
+              <p class="text-slate-600 text-sm mb-4">Серьёзный студент, президент студенческого совета, эксперт в электрических атаках</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Полидевк</span>
+                <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Кулаки</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="media" class="py-20 bg-blue-50">
+      <div  class="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h3  class="text-3xl font-bold text-slate-800 mb-12 text-center">Галерея</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 sm:px-8">
+            <!-- Карточка 1 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300">
+                <img src="img/image_2025-04-22_00-06-52.png" 
+                     alt="Боевая система" 
+                     class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-white font-bold text-xl block">Боевая система</span>
+                        <p class="text-blue-200 mt-2 text-sm opacity-0 group-hover:opacity-100 transition duration-500">Уникальная пошаговая система боя с Персонами</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Карточка 2 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300">
+                <img src="img/school.png" 
+                     alt="Школьная жизнь" 
+                     class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-white font-bold text-xl block">Школьная жизнь</span>
+                        <p class="text-blue-200 mt-2 text-sm opacity-0 group-hover:opacity-100 transition duration-500">Социальные связи и повседневные события</p>
+                    </div>
+                </div>
+            </div>
+    
+            
+            <!-- Карточка 3 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300">
+                <img src="img/tartar.jpeg" 
+                     alt="Тартарус" 
+                     class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-white font-bold text-xl block">Тартарус</span>
+                        <p class="text-blue-200 mt-2 text-sm opacity-0 group-hover:opacity-100 transition duration-500">Таинственная башня, наполненная Тенями</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Карточка 4 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300">
+                <img src="img/persona.jpg" 
+                     alt="Персоны" 
+                     class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-white font-bold text-xl block">Персоны</span>
+                        <p class="text-blue-200 mt-2 text-sm opacity-0 group-hover:opacity-100 transition duration-500">Воплощение вашего внутреннего "Я"</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Карточка 5 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300">
+                <img src="img/gg1.jpg" 
+                     alt="Главный герой" 
+                     class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-white font-bold text-xl block">Главный Герой</span>
+                        <p class="text-blue-200 mt-2 text-sm opacity-0 group-hover:opacity-100 transition duration-500">Обладатель редкой способности вызывать несколько Персон</p>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Карточка 6 -->
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer hover:shadow-xl transition-all duration-300">
+                <img src="img/ss_8182ac626d22010c5e93e0bdfbd7b2d89860657a.1920x1080.jpg" 
+                     alt="Карта" 
+                     class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500 ease-in-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition duration-300">
+                    <div class="translate-y-4 group-hover:translate-y-0 transition duration-300">
+                        <span class="text-white font-bold text-xl block">Карта</span>
+                        <p class="text-blue-200 mt-2 text-sm opacity-0 group-hover:opacity-100 transition duration-500">Карта Порт-Айленда</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Секция геймплея -->
+    <section id="gameplay" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-slate-800 mb-4">Геймплей</h2>
+          <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+          <p class="max-w-3xl mx-auto text-lg text-slate-600">Сочетание социального симулятора и классического JRPG с пошаговыми боями и системой Персон.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+          <div class="order-2 md:order-1">
+            <h3 class="text-2xl font-bold text-slate-800 mb-6">Дневная жизнь</h3>
+            <p class="text-slate-600 mb-6">Днём вы - обычный студент школы Гакуэн: посещаете уроки, отвечаете на вопросы учителей, заводите друзей и развиваете социальные связи (Social Links), которые напрямую влияют на силу ваших Персон.</p>
+            <p class="text-slate-600">Вы можете проводить время с одноклассниками, подрабатывать, повышать свои характеристики (академические способности, обаяние и мужество) или исследовать город.</p>
+            
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <i class="fas fa-book text-blue-600 text-2xl mb-2"></i>
+                <h4 class="text-slate-800 font-medium">Учёба</h4>
+                <p class="text-slate-600 text-sm">Повышайте академические навыки для лучших результатов</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <i class="fas fa-users text-blue-600 text-2xl mb-2"></i>
+                <h4 class="text-slate-800 font-medium">Социальные Линии</h4>
+                <p class="text-slate-600 text-sm">Развивайте отношения для усиления Персон</p>
+              </div>
+            </div>
+          </div>
+          <div class="order-1 md:order-2">
+            <img src="img/school1.png" alt="Persona 3 Reload School Life" class="rounded-xl shadow-xl">
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mt-16">
+          <div>
+            <img src="img/game.png" alt="Persona 3 Reload Battle" class="rounded-xl shadow-xl">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-6">Ночные сражения</h3>
+            <p class="text-slate-600 mb-6">Во время Тёмного часа вы исследуете Тартарус - гигантскую башню, заполненную Тенями. Боевая система основана на пошаговых сражениях с использованием Персон, каждая из которых обладает уникальными способностями.</p>
+            <p class="text-slate-600">Система "One More" позволяет получить дополнительный ход при попадании по слабому месту врага. Комбинированные атаки (All-Out Attacks) наносят огромный урон, когда все враги сбиты с ног.</p>
+            
+            <div class="mt-8 grid grid-cols-2 gap-4">
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <i class="fas fa-sync-alt text-blue-600 text-2xl mb-2"></i>
+                <h4 class="text-slate-800 font-medium">Смена Персон</h4>
+                <p class="text-slate-600 text-sm">Адаптируйтесь к любым противникам</p>
+              </div>
+              <div class="bg-blue-50 p-4 rounded-lg">
+                <i class="fas fa-bolt text-blue-600 text-2xl mb-2"></i>
+                <h4 class="text-slate-800 font-medium">Слабые места</h4>
+                <p class="text-slate-600 text-sm">Эксплуатируйте уязвимости врагов</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<section id="buy" class="py-20 bg-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-slate-800 mb-4">Приобрести игру</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+        <p class="max-w-3xl mx-auto text-lg text-slate-600">Выберите подходящее издание и начните своё путешествие в мир Persona 3 Reload</p>
+      </div>
+  
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Блок изданий -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-slate-800 mb-6">Доступные издания</h3>
+            
+            <div class="space-y-6">
+              <!-- Стандартное издание -->
+              <div id="standard-edition" class="p-6 border border-gray-200 rounded-xl transition-all duration-300">
+                <div class="flex justify-between items-start">
+                  <h4 class="text-xl font-semibold text-slate-800">Стандартное издание</h4>
+                  <span class="text-2xl font-bold text-blue-600">2 499 ₽</span>
+                </div>
+                <p class="text-slate-600 mt-2">Полная версия игры Persona 3 Reload с основным сюжетом</p>
+                <button onclick="selectEdition('standard')" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  Выбрать
+                </button>
+              </div>
+  
+              <!-- Deluxe издание -->
+              <div id="deluxe-edition" class="p-6 border border-gray-200 rounded-xl transition-all duration-300">
+                <div class="flex justify-between items-start">
+                  <h4 class="text-xl font-semibold text-slate-800">Deluxe издание</h4>
+                  <span class="text-2xl font-bold text-blue-600">3 499 ₽</span>
+                </div>
+                <p class="text-slate-600 mt-2">Игра + эксклюзивные костюмы, дополнительные Персоны и цифровой артбук</p>
+                <button onclick="selectEdition('deluxe')" class="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                  Выбрать
+                </button>
+              </div>
+            </div>
+  
+
+          <!-- Сравнение изданий -->
+          <div class="mt-8 bg-blue-50 rounded-lg p-6">
+            <h4 class="text-lg font-semibold text-slate-800 mb-4">Сравнение изданий</h4>
+            <div class="space-y-3 text-sm">
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">Базовая игра</span>
+                <div class="flex space-x-8">
+                  <span class="text-blue-600 font-bold">✓</span>
+                  <span class="text-blue-600 font-bold">✓</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">Эксклюзивные костюмы</span>
+                <div class="flex space-x-8">
+                  <span class="text-slate-400">✗</span>
+                  <span class="text-blue-600 font-bold">✓</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">Дополнительные Персоны</span>
+                <div class="flex space-x-8">
+                  <span class="text-slate-400">✗</span>
+                  <span class="text-blue-600 font-bold">✓</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">Цифровой артбук</span>
+                <div class="flex space-x-8">
+                  <span class="text-slate-400">✗</span>
+                  <span class="text-blue-600 font-bold">✓</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-slate-600">Саундтрек</span>
+                <div class="flex space-x-8">
+                  <span class="text-slate-400">✗</span>
+                  <span class="text-blue-600 font-bold">✓</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Кнопка покупки -->
+          <button class="mt-8 w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-4 px-6 rounded-xl font-bold hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+            Оформить
+          </button>
+        </div>
+      </div>
+
+      
+      
+      <!-- Форма обратной связи -->
+       
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold text-slate-800 mb-6">Остались вопросы?</h3>
+          <p class="text-slate-600 mb-6">Заполните форму, и наш специалист свяжется с вами в течение 24 часов</p>
+          <!-- Уведомления -->
+<?php 
+session_start();
+if (isset($_SESSION['form_success'])): 
+    unset($_SESSION['form_success']); // Удаляем флаг после показа
+?>
+    <div class="mb-6 p-4 bg-green-100 text-green-700 rounded-lg animate-fade-in">
+        ✓ Спасибо! Ваше сообщение отправлено.
+    </div>
+<?php endif; ?>
+
+<?php if (isset($_SESSION['form_error'])): ?>
+    <div class="mb-6 p-4 bg-red-100 text-red-700 rounded-lg animate-fade-in">
+        <?= $_SESSION['form_error'] ?>
+    </div>
+    <?php unset($_SESSION['form_error']); ?>
+<?php endif; ?>
+          <form action="submit_feedback.php" method="POST" class="space-y-5">
+            <!-- Поле имени -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Ваше имя</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" placeholder="Иван Иванов" required>
+            </div>
+        
+            <!-- Поле email -->
+            <div>
+                <label for="email" class="block text-sm font-medium text-slate-700 mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" placeholder="your@email.com" required>
+            </div>
+        
+            <!-- Поле сообщения -->
+            <div>
+                <label for="message" class="block text-sm font-medium text-slate-700 mb-2">Ваш вопрос</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300" placeholder="Напишите ваш вопрос здесь..." required></textarea>
+            </div>
+        
+            <!-- Кнопка отправки -->
+            <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-blue-500 text-white py-4 px-6 rounded-xl font-bold hover:from-blue-700 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl mt-4">
+                Отправить вопрос
+            </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Футер -->
+  <footer class="bg-blue-700 text-white">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="text-2xl font-bold mb-4">PERSONA 3 RELOAD</div>
+          <p class="text-blue-100 mb-6">Persona 3 Reload - переосмысление культовой JRPG 2006 года с современной графикой и улучшенным геймплеем.</p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-blue-200 hover:text-white">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-blue-200 hover:text-white">
+              <i class="fab fa-facebook text-xl"></i>
+            </a>
+            <a href="#" class="text-blue-200 hover:text-white">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" class="text-blue-200 hover:text-white">
+              <i class="fab fa-youtube text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-4">Игра</h3>
+          <ul class="space-y-2">
+            <li><a href="#story" class="text-blue-200 hover:text-white">Сюжет</a></li>
+            <li><a href="#characters" class="text-blue-200 hover:text-white">Персонажи</a></li>
+            <li><a href="#gameplay" class="text-blue-200 hover:text-white">Геймплей</a></li>
+            <li><a href="#media" class="text-blue-200 hover:text-white">Медиа</a></li>
+            <li><a href="#buy" class="text-blue-200 hover:text-white">Купить</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-4">Поддержка</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-blue-200 hover:text-white">FAQ</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white">Форумы</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white">Техподдержка</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white">Сообщить о проблеме</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-lg mb-4">О компании</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-blue-200 hover:text-white">Atlus</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white">Sega</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white">Вакансии</a></li>
+            <li><a href="#" class="text-blue-200 hover:text-white">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-blue-600 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-blue-200 text-sm">© 2023 Atlus Co., Ltd. Все права защищены.</p>
+        <div class="mt-4 md:mt-0 flex space-x-6">
+          <a href="#" class="text-blue-200 hover:text-white text-sm">Условия использования</a>
+          <a href="#" class="text-blue-200 hover:text-white text-sm">Политика конфиденциальности</a>
+          <a href="#" class="text-blue-200 hover:text-white text-sm">Настройки cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="js.js"></script>
+</html>
